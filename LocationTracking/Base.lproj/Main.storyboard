@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina3_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="LocationTracking" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="j24-Ym-JxV" customClass="GMSMapView">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="440"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0kQ-pu-ugl">
+                                <rect key="frame" x="0.0" y="440" width="320" height="40"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RKl-BS-Cqz">
+                                        <rect key="frame" x="48" y="2" width="224" height="36"/>
+                                        <color key="backgroundColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="15"/>
+                                        <state key="normal" title="Start Moving"/>
+                                        <connections>
+                                            <action selector="onClickStart:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Vbv-Qv-ZEI"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstItem="RKl-BS-Cqz" firstAttribute="centerY" secondItem="0kQ-pu-ugl" secondAttribute="centerY" id="Hvl-Nm-mXl"/>
+                                    <constraint firstItem="RKl-BS-Cqz" firstAttribute="width" secondItem="0kQ-pu-ugl" secondAttribute="width" multiplier="0.7" id="Lao-Ea-nPu"/>
+                                    <constraint firstItem="RKl-BS-Cqz" firstAttribute="height" secondItem="0kQ-pu-ugl" secondAttribute="height" multiplier="0.9" id="dGS-P3-iWY"/>
+                                    <constraint firstAttribute="height" constant="40" id="dz8-rL-sfg"/>
+                                    <constraint firstItem="RKl-BS-Cqz" firstAttribute="centerX" secondItem="0kQ-pu-ugl" secondAttribute="centerX" id="tZ3-Ga-B88"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="0kQ-pu-ugl" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="4ub-63-LQ1"/>
+                            <constraint firstItem="0kQ-pu-ugl" firstAttribute="top" secondItem="j24-Ym-JxV" secondAttribute="bottom" id="H9N-DX-fS6"/>
+                            <constraint firstItem="j24-Ym-JxV" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="I64-eH-xgA"/>
+                            <constraint firstItem="0kQ-pu-ugl" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="La9-UV-rXQ"/>
+                            <constraint firstItem="j24-Ym-JxV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Rys-a4-BQs"/>
+                            <constraint firstItem="0kQ-pu-ugl" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="X9f-by-dHv"/>
+                            <constraint firstItem="j24-Ym-JxV" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="r0O-Up-4t0"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="btnStart" destination="RKl-BS-Cqz" id="2HZ-hf-Aaw"/>
+                        <outlet property="mapView" destination="j24-Ym-JxV" id="gfa-zN-5dt"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="138.75" y="120"/>
+        </scene>
+    </scenes>
+</document>
